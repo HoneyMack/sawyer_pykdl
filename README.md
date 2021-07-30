@@ -7,7 +7,7 @@ This example assumes you have completed the Rethink Robotics ![Workstation Setup
 ### Clone and make the repository
 ```
 $ cd ~/ros_ws/src/
-$ git clone https://github.com/rupumped/sawyer_pykdl.git
+$ git clone https://github.com/HIRO-group/sawyer_pykdl.git
 $ cd ~/ros_ws
 $ catkin_make
 ```
