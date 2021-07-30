@@ -34,41 +34,41 @@ from sawyer_pykdl import sawyer_kinematics
 
 def main():
     rospy.init_node('sawyer_kinematics')
-    print '*** Sawyer PyKDL Kinematics ***\n'
+    print('*** Sawyer PyKDL Kinematics ***\n')
     kin = sawyer_kinematics('right')
 
-    print '\n*** Sawyer Description ***\n'
+    print('\n*** Sawyer Description ***\n')
     kin.print_robot_description()
-    print '\n*** Sawyer KDL Chain ***\n'
+    print('\n*** Sawyer KDL Chain ***\n')
     kin.print_kdl_chain()
     # FK Position
-    print '\n*** Sawyer Position FK ***\n'
-    print kin.forward_position_kinematics()
+    print('\n*** Sawyer Position FK ***\n')
+    print(kin.forward_position_kinematics())
     # FK Velocity
-    # print '\n*** Sawyer Velocity FK ***\n'
+    # print('\n*** Sawyer Velocity FK ***\n'
     # kin.forward_velocity_kinematics()
     # IK
-    print '\n*** Sawyer Position IK ***\n'
+    print('\n*** Sawyer Position IK ***\n')
     pos = [0.582583, -0.180819, 0.216003]
     rot = [0.03085, 0.9945, 0.0561, 0.0829]
-    print kin.inverse_kinematics(pos)  # position, don't care orientation
-    print '\n*** Sawyer Pose IK ***\n'
-    print kin.inverse_kinematics(pos, rot)  # position & orientation
+    print(kin.inverse_kinematics(pos))  # position, don't care orientation
+    print('\n*** Sawyer Pose IK ***\n')
+    print(kin.inverse_kinematics(pos, rot))  # position & orientation
     # Jacobian
-    print '\n*** Sawyer Jacobian ***\n'
-    print kin.jacobian()
+    print('\n*** Sawyer Jacobian ***\n')
+    print(kin.jacobian())
     # Jacobian Transpose
-    print '\n*** Sawyer Jacobian Tranpose***\n'
-    print kin.jacobian_transpose()
+    print('\n*** Sawyer Jacobian Tranpose***\n')
+    print(kin.jacobian_transpose())
     # Jacobian Pseudo-Inverse (Moore-Penrose)
-    print '\n*** Sawyer Jacobian Pseudo-Inverse (Moore-Penrose)***\n'
-    print kin.jacobian_pseudo_inverse()
+    print('\n*** Sawyer Jacobian Pseudo-Inverse (Moore-Penrose)***\n')
+    print(kin.jacobian_pseudo_inverse())
     # Joint space mass matrix
-    print '\n*** Sawyer Joint Inertia ***\n'
-    print kin.inertia()
+    print('\n*** Sawyer Joint Inertia ***\n')
+    print(kin.inertia())
     # Cartesian space mass matrix
-    print '\n*** Sawyer Cartesian Inertia ***\n'
-    print kin.cart_inertia()
+    print('\n*** Sawyer Cartesian Inertia ***\n')
+    print(kin.cart_inertia())
 
 if __name__ == "__main__":
     main()
